@@ -1,0 +1,88 @@
+diagramma del contesto - bozza:
+
+N.B per la differenziazione degli utenti nel diagramma del contesto non si fa: metti tutto in un contenitore con più flussi (se diventano troppi flussi puoi spezzare)
+
+--------------------------------------------------------------------------------
+
+- sistemi::
+    - db(MongoDB): subordinato
+    - file system API: subordinato
+    - mail verification API: subordinato
+    - google forms API: subordinato
+    - utente (attore)
+    - amministratore (attore)**
+
+** nonostante la nota sopra mi sembra meglio almeno separare un amministratore da un utente normale
+
+- cosa deve fare ogni sistema **:
+    - db:
+        + dispensa:: fornisce all'app la lista di ingredienti nella dispensa di
+        un utente
+
+        + aggiungere un ingrediente:: fornisce gli ingredienti che ha al suo
+        interno dato un certa stringa
+        (es. utente digita farina -> richiesta db -> db ritorna gli ingredienti
+        con 'farina' nel loro nome)
+
+        + ricerca ricette:: fornisce le ricette a sua disposizione a seconda
+        dei parametri forniti
+
+        + commenti: fornisce i commenti inerenti alle ricette
+
+        + fase di autenticazione:: fornisce le credenziali associate ad un certo
+        utente (l'app poi si occuperà del confronto)
+
+        + registrazione:: memorizza e poi fornirà all'app i dati dell'utente
+        registrato
+
+        + level up:: fornisce i dati riguardanti all'engagement (numero di
+        commenti, foto ecc.)
+
+    - file system API: 
+        + commenti:: si occupa del caricamento di una o più foto dal
+        dispositivo locale all'app
+
+        + account:: carica dal dispositivo locale la foto scelta per l'account
+        
+    - mail verification API:
+        + registrazione:: manda una mail all'indirizzo utente fornito
+        
+        + cambio dati:: manda una mail per confermare il cambiamento mail di un
+        account registrato 
+
+        + moderazione:: manda una mail alla segnalazione di un commento
+
+        + pubblicazione ricetta:: manda una mail al moderatore alla richiesta
+        di pubblicazione di una ricetta e una mail di risposta all'utente con
+        l'esito della review della ricetta
+
+
+    - utente:
+        + login:: inserisce le credenziali
+
+        + registrazione:: inserisce dati
+
+        + ricerca ricette:: inserisce parametri (compreso tutto ingredienti ecc)
+        
+        + visualizzazione pagina::
+            * da un rating
+            * completa ricetta
+            * salva nei suoi preferiti
+            * commenta
+            * segnala commenti
+
+        + cambia dati:: cambia username, psw e/o email
+
+        + pubblicazione ricetta:: richiesta compilazione form
+
+        + aggiunge ingredienti:: ricerca ingrediente e inserisce una quanità
+
+    - amministratore:
+        + segnalazioni:: rimuove commento
+        + pubblicazione ricette:: richiede un form per aggiungere ricette
+        
+
+** FORMATO: + funzionalità a cui fa riferimento:: di cosa si occupa a riguardo
+
+
+
