@@ -1,11 +1,8 @@
 -------------------------------------------
 USE CASES + SEQUENCE/ACTIVITY DIAGRAMS:
 
-- UTENTE NON REGISTRATO: 
-    - use cases raggruppati: https://lucid.app/lucidchart/369331e2-75e3-4d76-9c7f-2bf6aec50d27/edit?viewport_loc=1222%2C-144%2C1636%2C707%2C0_0&invitationId=inv_6c023a18-f5fa-4b3b-8705-627579b75a00
-
-    - activity diagrams: https://lucid.app/lucidchart/75741625-29e6-4844-91c1-fac8b86c70b7/edit?viewport_loc=-544%2C-64%2C4440%2C1920%2C0_0&invitationId=inv_e79450f9-a6c9-4051-934e-b309040529d3
-
+- UTENTE NON REGISTRATO + activity diagrams
+https://lucid.app/lucidchart/75741625-29e6-4844-91c1-fac8b86c70b7/edit?viewport_loc=-276%2C-153%2C4440%2C2117%2C0_0&invitationId=inv_e79450f9-a6c9-4051-934e-b309040529d3
 - UTENTE REGISTRATO:
 
 - AMMINISTRATORE:
